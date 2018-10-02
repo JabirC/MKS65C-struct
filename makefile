@@ -5,4 +5,4 @@ run:
 	./a.out
 
 f:
-	emacs struct.c
+	emacs struct.c &
