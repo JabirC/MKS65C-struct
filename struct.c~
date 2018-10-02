@@ -1,0 +1,10 @@
+# include<stdio.h>
+
+struct ktshirt {char * color; int days; double price;};
+
+int main(){
+
+  struct ktshirt s1;
+  s1.color = "Black";
+  return 0;
+}
