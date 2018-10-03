@@ -1,25 +1,40 @@
 # include<stdio.h>
-#include <time.h>
-/*
-struct ktshirt {char * color; int days; double price; char * text};
+# include<stdlib.h>
+# include<time.h>
+# include<string.h>
 
-struct ktshirt grabShirt(){
-  //ar * colors[5] = {"Blue", "Red" , "White", "Black", "Yellow"};
+struct ktshirt {char color[10]; int days; double price; char text[10];};
 
-    struct kshirt s;
-    srand(time(NULL));
-  // int index = rand()%10;
-  //scolor = *(colors + index);
+struct ktshirt grabShirt(char * text){
+  char * colors[5] = {"Blue", "Red" , "White", "Black", "Yellow"};
   
-  //eturn s
-  }
-*/
-
-int main(){
-  struct ktshirt {char color[10]; int days; double price; char text[10];};
+  struct ktshirt s;
+  srand(time(NULL));
   
-  struct ktshirt s1;
-  //struct ktshirt s1 = grabShirt();
-  printf("%s\n", s1.color);
+  
+  int index = rand()%5; 
+  strcpy(s.color, *(colors + index));
+  
+  strcpy(s.text, text);
+  
+  s.days = rand() % 10;
+  
+  s.price = (rand() % 100) / 10.0;
+  
+  return s;
+}
+
+void toString(struct ktshirt * s){
+  printf("The color is: %s \nHe wore it %d days\nIt cost %0.2lf dollars\nIt says: ' %s '\n", s->color, s->days, s->price, s->text);
+
+}
+
+
+int main(){  
+  struct ktshirt s1 = grabShirt("Bunny");
+  
+  
+  
+  printf("%s, %d, %0.2lf, %s\n", s1.color, s1.days, s1.price, s1.text);
   return 0;
 }
