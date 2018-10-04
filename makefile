@@ -1,4 +1,4 @@
-all : struct.c
+compile : struct.c
 	gcc struct.c
 
 run:
