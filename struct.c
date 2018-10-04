@@ -1,7 +1,8 @@
-# include<stdio.h>
-# include<stdlib.h>
-# include<time.h>
-# include<string.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+#include <string.h>
+#include "struct.h"
 
 struct ktshirt {char color[10]; int days; double price; char text[15];};
 
@@ -10,6 +11,7 @@ struct ktshirt grabShirt(char * text){
   char * colors[5] = {"Blue", "Red" , "White", "Black", "Yellow"};
 
   struct ktshirt s;
+
   int index = rand()%5;
 
   strcpy(s.color, *(colors + index));
