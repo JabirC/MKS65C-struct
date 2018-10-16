@@ -1,4 +1,4 @@
-compile : struct.c stru
+compile : struct.c struct.h
 	gcc struct.c
 
 run:
